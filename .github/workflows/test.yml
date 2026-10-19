@@ -9,12 +9,32 @@ on:
 
 permissions:
   contents: read
-  id-token: write
 
+jobs:
+  test:
+    name: Go Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Download dependencies
+        run: go mod download
+
+      - name: Run tests
+        run: go test ./... -v -timeout 30m
+
+  
+  
 TEST?=$$(go list ./... | grep -v 'vendor' | grep -v 'examples')
 
 testacc:
 	TF_ACC=1 go test $(TEST) -v $(TESTARGS) -timeout $(TESTTIMEOUT)
 
-  
-  
