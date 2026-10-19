@@ -1,1 +1,20 @@
 
+name: Tests
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths-ignore:
+      - "README.md"
+
+permissions:
+  contents: read
+  id-token: write
+
+TEST?=$$(go list ./... | grep -v 'vendor' | grep -v 'examples')
+
+testacc:
+	TF_ACC=1 go test $(TEST) -v $(TESTARGS) -timeout $(TESTTIMEOUT)
+
+  
+  
