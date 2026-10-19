@@ -1,3 +1,20 @@
+on:
+  workflow_dispatch:
+  pull_request:
+    paths-ignore:
+      - "README.md"
+
+
+TEST?=$$(go list ./... |grep -v 'vendor'|grep -v 'examples')
+
+
+testacc:
+	TF_ACC=1 go test $(TEST) -v $(TESTARGS) -timeout $(TESTTIMEOUT)
+
+
+- run: make testacc
+  timeout-minutes: 10
+
 # Terraform Provider testing workflow.
 name: Tests
 
