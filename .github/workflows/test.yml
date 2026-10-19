@@ -21,16 +21,7 @@ testacc:
         timeout-minutes: 10
 
 
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
-
-package provider
-
-import (
-        "context"
-        "fmt"
-
-        "github.com/hashicorp/terraform-plugin-framework/datasource"
+// -framework/datasource"
         "github.com/hashicorp/terraform-plugin-framework/datasource/schema"
         "github.com/hashicorp/terraform-plugin-framework/path"
         "github.com/hashicorp/terraform-plugin-framework/types"
