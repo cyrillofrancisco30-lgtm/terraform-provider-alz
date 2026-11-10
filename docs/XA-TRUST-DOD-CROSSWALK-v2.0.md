@@ -260,13 +260,14 @@ No automatic promotion is permitted.
 | Level | Meaning |
 | --- | --- |
 | E3 | Execution evidence |
-| E4 | Provenance and canonical evidence |
-| E5 | Cryptographic binding |
+| E4 | Provenance only - who, when, where, origin. Canonical payload (RFC 8785) and hash manifest belong to E5.|
+| E5 | Cryptographic binding | 
 | E6 | Independent verification |
 | E7 | Claim-scoped verification |
 | E8 | Global-scope assessment under explicitly declared criteria |
 
 E3–E8 are XA-TRUST evidence levels. They are not DoD Zero Trust maturity levels.
+
 
 ### 7.2 E7.&#32;
 
@@ -293,17 +294,13 @@ E8 requires:
 
 E8 must not be inferred from the accumulation of E7 claims.
 
-## 8\. Seven-artifact evidence contract
-
-Each assessed claim should provide the following artifacts:
-
-1. E4\_CANONICAL\_PAYLOAD.
-2. E4\_HASH\_MANIFEST.
-3. E5\_PROVENANCE\_RECORD.
-4. E5\_SIGNED\_DEP.
-5. GT7\_POLICY\_RESULT.
-6. GT96R\_REPLAY\_REPORT.
-7. E6\_INDEPENDENT\_VERIFICATION\_REPORT.
+E4_PROVENANCE_RECORD.
+E5_CANONICAL_PAYLOAD.
+E5_HASH_MANIFEST.
+E5_SIGNED_DEP.
+GT7_POLICY_RESULT.
+GT96R_REPLAY_REPORT.
+E6_INDEPENDENT_VERIFICATION_REPORT.
 
 ### Cryptographic requirements
 
