@@ -1,5 +1,6 @@
 
 
+
 # Terraform Provider for Azure Landing Zones
 
 Terraform provider for deploying and managing Azure Landing Zones (ALZ) using the Azure Verified Modules approach.
