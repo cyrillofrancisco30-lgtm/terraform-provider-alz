@@ -1,16 +1,52 @@
-{
-  "source_id": "ZTRA-v2.0-2022",
-  "organization": "US_DEPARTMENT_OF_DEFENSE",
-  "authority": "DOD_CIO",
-  "document": "DoD Zero Trust Reference Architecture",
-  "version": "2.0",
-  "year": 2022,
-  "covers": "7_PILLARS_OBJECTIVE_CHARACTERISTICS",
-  "covers_dod_45_capabilities": false,
-  "covers_xa_trust": false
-}
-*7 Pilares oficiais — usar estes nomes exatos:*
+# XA-TRUST — DoD Zero Trust Crosswalk
+File: XA-TRUST-DOD-ZT-CROSSWALK-001.md
+Spec ID: XA-TRUST-DOD-CROSSWALK-SPEC-002
+Version: 2.0.0
+Status: DRAFT — PROPOSED
+Classification: UNCLASSIFIED — PUBLIC SOURCES ONLY
 
+Este arquivo e um CROSSWALK ARQUITETURAL.
+Ele relaciona modelos. Ele NAO prova implementacao, conformidade, certificacao ou aprovacao.
+
+## 0. Status Global
+- spec_status: DRAFT — PROPOSED
+- crosswalk_status: PROPOSED
+- capability_inventory: PENDING_SOURCE_VERIFICATION
+- implementation_coverage: NOT_ASSESSED
+- evidence_coverage: NOT_ASSESSED
+- independent_validation: PENDING
+- official_dod_approval: NOT_CLAIMED
+- nato_approval: NOT_CLAIMED
+- certification: NOT_CLAIMED
+- award: NOT_CLAIMED
+- dod_target_level: NOT_CLAIMED
+
+## 1. O Que O XA-TRUST E
+Classificacao: Evidence Assurance & Execution Verification Infrastructure
+- coletar e preservar evidencias de execucoes digitais
+- vincular execucao, identidade, contexto, politica e artefatos
+- verificar integridade e proveniencia
+- permitir reconstrucao e replay controlado
+- produzir resultados de verificacao com escopo de claim declarado
+
+NAO e:
+- Nao e implementacao oficial do DoD
+- Nao e certificacao Zero Trust
+- Nao e substituto de IAM, EDR, SIEM, SDN, MFA, PAM, UEM/MDM, SOAR, DLP
+- Nao determina sozinho conformidade
+
+Distincao:
+- DoD Zero Trust: organiza pilares, objetivos e capacidades
+- XA-TRUST: organiza evidencias
+- Crosswalk: relaciona os dois, nao prova implementacao
+
+## 2. Fontes Oficiais
+Fonte 1 - ZTRA v2.0 2022 - DoD Zero Trust Reference Architecture
+- covers: 7_PILLARS_OBJECTIVE_CHARACTERISTICS
+- covers_dod_45: false
+- covers_xa_trust: false
+
+7 Pilares oficiais:
 1. User
 2. Device
 3. Networks/Environments
@@ -19,326 +55,158 @@
 6. Orchestration/Automation
 7. Analytics/Visibility
 
-2.2. Fonte 2 — DoD Zero Trust Strategy Announcement 2022
-{
-  "source_id": "DOD-ZT-STRATEGY-2022",
-  "organization": "US_DEPARTMENT_OF_DEFENSE",
-  "authority": "DOD_CIO",
-  "document": "DoD Zero Trust Strategy Announcement",
-  "year": 2022,
-  "covers": "EXISTENCE_OF_45_CAPABILITIES_AND_TARGET_LEVEL_CONCEPT",
-  "covers_dod_45_capabilities_names": false,
-  "note": "Prova que os 45 existem como conceito. Não lista nomes oficiais transcritos."
-}
-2.3. Fonte 3 — DoD Zero Trust Capability Execution Roadmap
-{
-  "source_id": "ZT-EXECUTION-ROADMAP-v1.1-2024",
-  "organization": "US_DEPARTMENT_OF_DEFENSE",
-  "authority": "DOD_CIO",
-  "document": "DoD Zero Trust Capability Execution Roadmap",
-  "version": "1.1",
-  "year": 2024,
-  "url": "https://dodcio.defense.gov/Portals/0/Documents/Library/ZTCapabilityExecutionRoadmap.pdf",
-  "covers": "45_CAPABILITIES_NUMBERED_APPENDIX_B",
-  "transcription_status": "PENDING_SOURCE_VERIFICATION",
-  "note": "Única fonte autorizada para official_name dos 45. Nenhum nome foi transcrito neste arquivo."
-}
-2.4. Fonte 4 — DoD Cybersecurity Reference Architecture
-{
-  "source_id": "CSRA-v5.0-2023-01-30",
-  "organization": "US_DEPARTMENT_OF_DEFENSE",
-  "authority": "DOD_CIO_CYBERSECURITY_ARCHITECTURE_DIVISION",
-  "document": "Department of Defense (DoD) Cybersecurity Reference Architecture",
-  "version": "5.0",
-  "publication_date": "2023-01-30",
-  "cleared_for_open_publication": "2023-02-07",
-  "classification": "UNCLASSIFIED",
-  "file_as_received": "CS-Ref-Architecture.pdf",
-  "pages": 27,
-  "covers": "PRINCIPLES_A1_A8_ACTIVITIES_C1_C5_CAPABILITIES_ENHANCEMENTS",
-  "covers_dod_45_capabilities": false,
-  "relationship_to_ztra": "ZTRA_PROVIDES_OBJECTIVE_CHARACTERISTICS_CSRA_PROVIDES_THRESHOLD_CHARACTERISTICS",
-  "relationship_to_jcids": "SUPPORTS_ICD_CDD_CSRC_CSA_CSE"
-}
-*Relação ZTRA vs CSRA — não confundir:*
+Fonte 2 - DOD-ZT-STRATEGY-2022
+- covers: EXISTENCE_OF_45_CAPABILITIES_AND_TARGET_LEVEL_CONCEPT
+- covers_dod_45_names: false
+- note: Prova que os 45 existem como conceito. Nao lista nomes oficiais.
 
-- `ZTRA v2.0 = objetivo` — onde o DoD quer chegar
-- `CSRA v5.0 = threshold` — mínimo para arquitetura ser considerada alinhada, para ICD / CDD / JCIDS e Cyber Survivability Endorsement
+Fonte 3 - ZT-EXECUTION-ROADMAP-v1.1-2024
+- url: https://dodcio.defense.gov/Portals/0/Documents/Library/ZTCapabilityExecutionRoadmap.pdf
+- covers: 45_CAPABILITIES_NUMBERED_APPENDIX_B
+- transcription_status: PENDING_SOURCE_VERIFICATION
+- note: Unica fonte autorizada para official_name dos 45. Nenhum nome transcrito aqui.
 
-2.5. Fonte 5 — Domínio Oficial Atual DoW CIO
-{
-  "source_id": "DOWCIO-WAR-GOV-2026",
-  "organization": "US_DEPARTMENT_OF_WAR",
-  "authority": "DOW_CIO",
-  "domain": "dowcio.war.gov",
-  "sponsor": "Hon. Kirsten A. Davies",
-  "covers": "CURRENT_DOMAIN_AND_LEADERSHIP",
-  "covers_implementation": false
-}
-2.6. Fonte 6 — NATO DTIS 2.0 + DPC
-{
-  "source_id": "NATO-DTIS-2.0-2026",
-  "organization": "NATO",
-  "authority": "NATO_DTIS",
-  "document": "Digital Transformation Implementation Strategy 2.0",
-  "year": 2026,
-  "covers": "STRATEGY_LINES_OF_EFFORT",
-  "covers_implementation": false
-}
-{
-  "source_id": "NATO-DPC",
-  "organization": "NATO",
-  "authority": "NATO_DEFENCE_PLANNING_COMMITTEE",
-  "covers": "GOVERNANCE_APPROVAL_OF_POLICIES_ARCHITECTURES_STANDARDS",
-  "covers_implementation": false
-}
-> DTIS 2.0 = estratégia. DPC = governança. Nenhum dos dois altera implementação.
+Fonte 4 - CSRA-v5.0-2023-01-30
+- document: Department of Defense (DoD) Cybersecurity Reference Architecture
+- version: 5.0
+- publication_date: 2023-01-30
+- cleared: 2023-02-07
+- classification: UNCLASSIFIED
+- pages: 27
+- file: CS-Ref-Architecture.pdf
+- relationship_to_ztra: ZTRA_PROVIDES_OBJECTIVE_CHARACTERISTICS_CSRA_PROVIDES_THRESHOLD_CHARACTERISTICS
+- relationship_to_jcids: SUPPORTS_ICD_CDD_CSRC_CSA_CSE
+- ZTRA v2.0 = objetivo
+- CSRA v5.0 = threshold
 
-2.7. Fonte 7 — DoW CIO Annual Awards
-{
-  "source_id": "DOW-CIO-AWARDS-2026",
-  "organization": "US_DEPARTMENT_OF_WAR",
-  "authority": "DOW_CIO",
-  "document": "26th Annual DoW CIO Awards Program",
-  "year": 2026,
-  "covers": "RECOGNITION_OF_PEOPLE_TEAMS",
-  "covers_implementation": false,
-  "award_claim": "NOT_CLAIMED"
-}
-> Awards = reconhecimento de pessoas/times. Não é controle, execução ou evidência.
+Fonte 5 - DOWCIO-WAR-GOV-2026
+- domain: dowcio.war.gov
+- sponsor: Hon. Kirsten A. Davies
+- covers_implementation: false
 
----
+Fonte 6 - NATO DTIS 2.0 2026 + DPC
+- DTIS 2.0 = estrategia
+- DPC = governanca
+- covers_implementation: false
 
-3. CSRA v5.0 — Princípios, Atividades, Capabilities
+Fonte 7 - DOW-CIO-AWARDS-2026
+- document: 26th Annual DoW CIO Awards Program
+- covers: RECOGNITION_OF_PEOPLE_TEAMS
+- award_claim: NOT_CLAIMED
 
-3.1. 3 Princípios
+## 3. CSRA v5.0
+Principle 1: Reduce risk from the inside out
+- 1.1 Least privilege
+- 1.2 Eliminate unnecessary security controls
+- 1.3 Isolation
+Principle 2: Increase mission assurance through resilience
+- 2.1 Deny by default
+- 2.2 Assume breach
+- 2.3 Recover
+Principle 3: Enable modernization
+- 3.1 Integrate ICAM
+- 3.2 Establish and enforce data tagging
+- 3.3 Accelerate movement to secure cloud services
+- 3.4 Standardize and streamline cybersecurity data analytics
 
-- *Principle 1: Reduce risk from the inside out*
-    - 1.1 Least privilege
-    - 1.2 Eliminate unnecessary security controls
-    - 1.3 Isolation
-
-- *Principle 2: Increase mission assurance through resilience*
-    - 2.1 Deny by default
-    - 2.2 Assume breach
-    - 2.3 Recover
-
-- *Principle 3: Enable modernization*
-    - 3.1 Integrate ICAM
-    - 3.2 Establish and enforce data tagging
-    - 3.3 Accelerate movement to secure cloud services
-    - 3.4 Standardize and streamline cybersecurity data analytics
-
-3.2. 3 Outcomes Técnicos ZTA — CSRA v5.0
-
-Eliminar / reduzir, nos termos MITRE ATT&CK:
-
-- Persistence
-- Privilege Escalation
-- Lateral Movement
-
-Com:
-
+Outcomes ZTA: eliminar/reduzir Persistence, Privilege Escalation, Lateral Movement
 - Authenticated and authorized access to all resources
 - Access control enforcement based on multiple sources of authoritative data
 - Automated security responses enable dynamic changes to security controls
 
-3.3. 8 Atividades Operacionais — A.1 a A.8
-ID	Atividade	Descrição Curta
-A.1	Identify	Identify users, devices, services
-A.2	Manage	Manage users, devices, configuration
-A.3	Control	Macro/micro segment network + environment
-A.4	Protect	Tag data, encrypt data, enforce security policies
-A.5	Detect	Detect anomalous behavior, inspect traffic content + measurements
-A.6	Analyze	Log inspection results, analyze event data
-A.7	Automate	Automate policy-based + event-based responses
-A.8	Orchestrate	Integrate threat intelligence + automated workflows
-3.4. 5 Capabilities CSRA — C.1 a C.5 — Base NIST CSF
-ID	Capability	Sub-capabilities
-C.1	Identify	User enumeration, Device enumeration
-C.2	Protect	Authentication and authorization, Data protection, Network protection, Application security
-C.3	Detect	Continuous monitoring
-C.4	Respond	Cyberspace defense
-C.5	Recover	Cyberspace survivability
-3.5. 4 Enhancements CSRA
+Atividades A.1 a A.8:
+- A.1 Identify: Identify users, devices, services
+- A.2 Manage: Manage users, devices, configuration
+- A.3 Control: Macro/micro segment network + environment
+- A.4 Protect: Tag data, encrypt data, enforce security policies
+- A.5 Detect: Detect anomalous behavior, inspect traffic content + measurements
+- A.6 Analyze: Log inspection results, analyze event data
+- A.7 Automate: Automate policy-based + event-based responses
+- A.8 Orchestrate: Integrate threat intelligence + automated workflows
 
-- *4.1 Cloud Computing* — CNAP, CNSS Policy 32, FedRAMP, CC SRG
-- *4.2 Cross Domain* — Information Exchange Security, JCA 6.3.1
-- *4.3 Control Systems* — ICS / SCADA, 7 camadas ICS, MCCS / MC-FRCS, OT prioriza availability acima de confidentiality / integrity
-- *4.4 Space Systems* — SCDRA, Cyber for Defensive Space Control
+Capabilities C.1 a C.5:
+- C.1 Identify: User enumeration, Device enumeration
+- C.2 Protect: Authentication and authorization, Data protection, Network protection, Application security
+- C.3 Detect: Continuous monitoring
+- C.4 Respond: Cyberspace defense
+- C.5 Recover: Cyberspace survivability
 
----
+Enhancements:
+- 4.1 Cloud: CNAP, CNSS Policy 32, FedRAMP, CC SRG
+- 4.2 Cross Domain: Information Exchange Security, JCA 6.3.1
+- 4.3 Control Systems: ICS / SCADA, 7 camadas ICS, MCCS / MC-FRCS, OT prioriza availability
+- 4.4 Space Systems: SCDRA, Cyber for Defensive Space Control
 
-4. Cruzamento dos 7 Pilares — Arquitetural, Não Operacional
+## 4. Cruzamento 7 Pilares
+- 1. User - XA: Identity & Policy - Pode: vincular identidade, credenciais, contexto e decisao a registros - Falta: inventario, MFA, federacao, PAM, autenticacao continua, menor privilegio
+- 2. Device - XA: Identidade de dispositivo - Pode: registrar identidade declarada e associar a execucao - Falta: inventario, postura, autorizacao real-time, UEM/MDM, EDR/XDR
+- 3. Applications/Workloads - XA: Execution Observability - Pode: associar app, versao, workload, politica e execucao - Falta: inventario apps, dev seguro, risco software, autorizacao continua
+- 4. Data - XA: Evidence Collection, Vault, criptografia - Pode: preservar payloads, proveniencia, hashes, assinaturas, manifests - Falta: catalogo, classificacao, monitoramento, DLP, direitos, controle acesso
+- 5. Networks/Environments - XA: Trust Boundaries - Pode: registrar fronteiras, origem, destino, contexto - Falta: SDN, fluxos, macro e microsegmentacao aplicadas
+- 6. Orchestration/Automation - XA: Policy Engine, Decision Orchestrator - Pode: registrar politicas, decisoes, resultados - Falta: PDP operacional, SOAR, resposta incidentes, SOC
+- 7. Analytics/Visibility - XA: Logs, auditoria, GT7, GT96-R - Pode: correlacionar eventos, decisoes, evidencias - Falta: SIEM, UEBA, threat intel, analytics, cobertura logs
 
-> A coluna de situação não presume que uma capacidade esteja operacional apenas porque existe um componente XA com nome ou finalidade semelhante.
-Pilar DoD	Correspondência Arquitetural XA-TRUST	O Que O XA-TRUST Pode Contribuir	O Que Ainda Precisa Ser Demonstrado
-1. User	Identity & Policy, autenticação e autorização	Vincular identidade, credenciais, contexto e decisão de acesso a registros de execução	Inventário de usuários, MFA efetivo, federação, PAM, autenticação contínua e menor privilégio
-2. Device	Identidade de dispositivo e contexto de execução	Registrar a identidade declarada do dispositivo e associá-la à execução e à evidência	Inventário, detecção de postura, autorização em tempo real, UEM/MDM e EDR/XDR
-3. Applications/Workloads	Execution Observability e controle de workloads	Associar aplicação, versão, workload, política e execução observada	Inventário de aplicações, desenvolvimento seguro, gestão de risco de software e autorização contínua
-4. Data	Evidence Collection, Evidence Vault e criptografia	Preservar payloads, proveniência, hashes, assinaturas, manifests e registros de auditoria	Catálogo de dados, classificação, monitoramento, DLP, direitos e controle de acesso aos dados
-5. Networks/Environments	Trust Boundaries e segmentação	Registrar fronteiras de confiança, origem, destino e contexto declarado de comunicação	SDN, mapeamento de fluxos, macrosegmentação e microsegmentação efetivamente aplicadas
-6. Orchestration/Automation	Policy Engine e Decision Orchestrator	Registrar políticas aplicadas, decisões automatizadas, resultados e encadeamento da execução	PDP operacional, automação de processos críticos, SOAR, resposta a incidentes e integração com SOC
-7. Analytics/Visibility	Logs, auditoria, GT7 e GT96-R	Correlacionar eventos, decisões, evidências, resultados e reconstruções de execução	SIEM, UEBA, inteligência de ameaças, analytics de segurança e cobertura integral de logs
-*Leitura técnica:* correspondência mais direta com Data, Orchestration/Automation e Analytics/Visibility. Nos demais pilares, atua como camada de evidência e rastreabilidade, mas não substitui os controles de segurança que o DoD descreve.
+Leitura: mais direto em Data, Orchestration/Automation, Analytics/Visibility. Nos demais, so camada de evidencia, nao substitui controles.
 
----
+## 5. Pilares DoD vs E3-E8
+- Pilares DoD = dominios de capacidades
+- E3-E8 = estados do ciclo de evidencias XA-TRUST
+- E3 EXECUTION: evidencia de que execucao ocorreu no escopo declarado
+- E4 PROVENANCE: vinculo de origem e proveniencia
+- E5 CRYPTOGRAPHIC BINDING: vinculacao criptografica
+- E6 INDEPENDENT VERIFICATION: verificacao independente
+- E7 VERIFIED(CLAIM-X): resultado verificado limitado a claim especifica
+- E8 Escopo global: exige criterios globais, reconstrucao independente e politica
+- E7 de 1 execucao nao significa pilar inteiro atendido. Crosswalk nao promove para E6/E7.
 
-5. Relação Entre Pilares DoD e E3–E8
+## 6. Matriz 45 Capabilities
+Regra: NAO preencher official_name com parafrase. Somente transcrever do Appendix B do Roadmap v1.1.
+Status permitidos: ARCHITECTURAL_MAPPING_ONLY, IMPLEMENTATION_EVIDENCE_PENDING, IMPLEMENTATION_OBSERVED, EXECUTION_EVIDENCE_PENDING, EXECUTION_OBSERVED, INDEPENDENT_VERIFICATION_PENDING, CLAIM_SCOPED_VERIFIED, NOT_APPLICABLE
 
-Pilares DoD = domínios de capacidades de segurança.
-E3–E8 = estados do ciclo de evidências XA-TRUST.
-São dimensões diferentes.
-Estado XA-TRUST	Significado	Relação Com O Crosswalk
-E3	EXECUTION	Evidência de que uma execução ocorreu no escopo declarado
-E4	PROVENANCE	Vínculo de origem e proveniência dos artefatos
-E5	CRYPTOGRAPHIC BINDING	Vinculação criptográfica dos artefatos e declarações
-E6	INDEPENDENT VERIFICATION	Verificação independente das evidências e dos critérios
-E7	VERIFIED(CLAIM-X)	Resultado verificado limitado a uma claim específica
-E8	Escopo global, quando declarado	Exige critérios globais, reconstrução independente e política aplicável
-> Um resultado E7 relativo a uma execução ou artefato não significa que um pilar inteiro do DoD esteja atendido. Um crosswalk completo não promove automaticamente qualquer evidência para E6 ou E7.
+Para cada capability, 4 verificacoes:
+1. Correspondencia: componente XA + requisito oficial
+2. Implementacao: codigo, config, integracao, ambiente
+3. Execucao: logs, artefatos, testes, proveniencia
+4. Verificacao independente: verificador independente
 
----
+Matriz:
+- 01 a 45: official_name = PENDING_SOURCE_VERIFICATION, Pilar = PENDING, Componente = PENDING, Requisito = PENDING, Evidencia Exigida = PENDING, Evidencia Disponivel = NONE, Lacuna = Transcricao do Appendix B pendente, Status = ARCHITECTURAL_MAPPING_ONLY
 
-6. Matriz das 45 Capabilities — Template, Todas PENDENTES
+## 7. Correcao JCS
+Teste: XA-TRUST-JCS-UNICODE-ORDERING-TEST-001
+- Ordenacao UTF-16: observada na execucao relatada
+- Hash 4d2b403180cb13c2fc68d229f58b8b4645582ea8d5331541a030733455467425: informado, nao recalculado independentemente
+- E5: NAO estabelecido por hash isolado
+- E6: PENDING
+- E7: NOT_PROMOTED
+- Mesmo validado, prova so canonicalizacao JCS, nao pilar Zero Trust.
 
-> NÃO preencher `official_name` com paráfrase, resumo, ou memória.
-> Somente transcrever do Appendix B do Execution Roadmap v1.1.
-> Até lá, todas as linhas ficam como abaixo.
+## 8. O Que Comprova Hoje
+- Fontes oficiais: Verificadas - Nao prova implementacao, so prova que DoD/NATO dizem isso
+- Crosswalk: PROPOSED - Nao prova, so correspondencia de ideia
+- Teste JCS: Observado, nao verificado - Nao prova, so 1 propriedade de canonicalizacao
+- Codigo por capability: Nao apresentado - Nao
+- Execucao por capability: Nao apresentada - Nao
+- Verificacao independente: PENDING - Nao
+- Hoje: 0 de 4 verificacoes completas para qualquer uma das 45.
 
-6.1. Regra de Preenchimento
+## 9. Checklist 1 Capability
+1. Correspondencia
+2. Implementacao: path codigo + config + commit
+3. Execucao: log + artefato + teste reproduzivel
+4. Verificacao: verificador independente recalculando, replayando, assinando
+Sem os 4, fica ARCHITECTURAL_MAPPING_ONLY ou IMPLEMENTATION_EVIDENCE_PENDING.
 
-Para cada capability, 4 verificações obrigatórias:
+## 10. Conclusao
+XA-TRUST e infraestrutura de governanca e verificacao de evidencias, com potencial de integracao transversal aos 7 pilares.
+Nao ha fundamento para declarar: implementacao das 45, Target Level, conformidade, aprovacao DoD, aprovacao NATO, award.
+Manter como PROPOSED.
 
-1. *Correspondência:* qual componente XA atende à capability e qual requisito específico está sendo relacionado.
-2. *Implementação:* código, configuração, integração e ambiente que demonstrem a implementação do controle.
-3. *Execução e evidência:* logs, artefatos, resultados de testes e vínculos de proveniência que demonstrem o funcionamento.
-4. *Verificação independente:* submeter artefatos e critérios a verificador independente, sem depender exclusivamente da declaração do próprio XA-TRUST.
-
-6.2. Status Permitidos Por Capability
-
-- `ARCHITECTURAL_MAPPING_ONLY`
-- `IMPLEMENTATION_EVIDENCE_PENDING`
-- `IMPLEMENTATION_OBSERVED`
-- `EXECUTION_EVIDENCE_PENDING`
-- `EXECUTION_OBSERVED`
-- `INDEPENDENT_VERIFICATION_PENDING`
-- `CLAIM_SCOPED_VERIFIED`
-- `NOT_APPLICABLE` — somente com justificativa documentada
-
-6.3. Matriz — 45 Linhas
-ID #	official_name	Pilar DoD	Componente XA [PROPOSED]	Requisito	Evidência Exigida	Evidência Disponível	Lacuna	Status
-1	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-2	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-3	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-4	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-5	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-6	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-7	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-8	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-9	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-10	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-11	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-12	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-13	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-14	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-15	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-16	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-17	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-18	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-19	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-20	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-21	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-22	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-23	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-24	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-25	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-26	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-27	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-28	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-29	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-30	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-31	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-32	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-33	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-34	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-35	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-36	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-37	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-38	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-39	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-40	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-41	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-42	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-43	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-44	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
-45	PENDING_SOURCE_VERIFICATION	PENDING	PENDING	PENDING	PENDING	NONE	Transcrição do Appendix B pendente	ARCHITECTURAL_MAPPING_ONLY
----
-
-7. Correção Sobre O Vetor JCS Mencionado Anteriormente
-
-*Teste:* `XA-TRUST-JCS-UNICODE-ORDERING-TEST-001`
-
-Estado que deve ser preservado:
-
-- Ordenação UTF-16: observada na execução relatada.
-- Hash `4d2b403180cb13c2fc68d229f58b8b4645582ea8d5331541a030733455467425`: informado, mas ainda não recalculado e comparado independentemente com os bytes canônicos do payload original.
-- E5: binding criptográfico não estabelecido por esse hash isolado.
-- E6: `PENDING`.
-- E7: `NOT_PROMOTED`.
-
-Esse teste, mesmo quando integralmente validado, comprovaria uma propriedade específica de canonicalização JCS — não a implementação de um pilar Zero Trust.
-
----
-
-8. O Que Comprova Hoje — Resumo Honesto
-O Que Você Tem	Status	Isso Prova Implementação?
-Fontes oficiais	Verificadas	Não, só prova que o DoD/NATO dizem isso
-Crosswalk arquitetural	PROPOSED	Não, só prova correspondência de ideia
-Teste JCS	Observado, não verificado	Não, só prova 1 propriedade de canonicalização
-Código por capability	Não apresentado	Não
-Execução por capability	Não apresentada	Não
-Verificação independente	PENDING	Não
-*Hoje: 0 de 4 verificações completas para qualquer uma das 45.*
-
----
-
-9. Checklist Para Provar 1 Capability Só
-
-Para provar 1 capability, precisa dos 4:
-
-1. *Correspondência:* qual componente XA + qual requisito oficial do Appendix B
-2. *Implementação:* path do código + config + commit
-3. *Execução:* log + artefato + resultado de teste reproduzível
-4. *Verificação:* verificador independente recalculando hash, replayando, e assinando
-
-Sem os 4, fica em `ARCHITECTURAL_MAPPING_ONLY` ou `IMPLEMENTATION_EVIDENCE_PENDING`.
-
----
-
-10. Conclusão
-
-Identificação proposta: XA-TRUST é uma infraestrutura de governança e verificação de evidências de execuções digitais, com potencial de integração transversal aos sete pilares do DoD Zero Trust.
-
-Não há, com os dados apresentados, fundamento para declarar:
-
-- implementação das 45 capacidades;
-- atendimento ao DoD Target Level;
-- conformidade ou certificação oficial;
-- aprovação ou homologação pelo DoD;
-- aprovação NATO;
-- award DoW CIO.
-
-Manter este registro como `PROPOSED` e preencher a matriz de 45 linhas com transcrição oficial + evidência + verificação independente. Isso transforma correspondência conceitual em processo de avaliação auditável, sem confundir arquitetura com conformidade.
-
----
-
-11. Referências
-
+## 11. Referencias
 - DoD Zero Trust Reference Architecture v2.0 (2022)
 - DoD Zero Trust Strategy (2022)
-- DoD Zero Trust Capability Execution Roadmap v1.1 (2024) — https://dodcio.defense.gov/Portals/0/Documents/Library/ZTCapabilityExecutionRoadmap.pdf
-- DoD Cybersecurity Reference Architecture v5.0 (2023-01-30) — `CS-Ref-Architecture.pdf`
-- http://dowcio.war.gov — DoW CIO
+- DoD Zero Trust Capability Execution Roadmap v1.1 (2024) - https://dodcio.defense.gov/Portals/0/Documents/Library/ZTCapabilityExecutionRoadmap.pdf
+- DoD Cybersecurity Reference Architecture v5.0 (2023-01-30) - CS-Ref-Architecture.pdf
+- dowcio.war.gov
 - NATO DTIS 2.0 (2026) + DPC
 - DoW CIO Annual Awards (2026)
